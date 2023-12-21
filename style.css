@@ -1,0 +1,260 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins&family=Roboto&display=swap"); */
+::-webkit-scrollbar {
+  width: 0%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  /*overflow-x: hidden; */
+}
+
+body {
+  /*Per responsive*/
+  /* position: relative; */
+  /* width: 100%; */
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: rgb(253, 171, 38); */
+  background-color: #ffffff;
+  /* min-height: 100vh; */
+  overflow-x: hidden;
+}
+
+/*menù*/
+.navbar {
+  position: sticky;
+  /* display: flex; */
+  top: 0;
+  left: 0;
+  /* z-index: 2; */
+  /* background-color: #e41a1af4; */
+  /* background-color: transparent; */
+  background-color: rgba(
+    9,
+    34,
+    203,
+    1
+  ); /* Imposta l'opacità qui (0.8 è il 80%) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra per evidenziare il form */
+  width: 100%;
+  padding: 15px 0px;
+  height: 75px;
+}
+
+.max {
+  max-width: 100%;
+  padding: 0px 80px;
+  margin: auto;
+}
+
+.navbar .max {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar .home a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar .home a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navbar .menu li a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.navbar .home img {
+  width: 50px;
+}
+
+/*INDEX*/
+
+#immSfondoLogin {
+  background: url("prova.avif") no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titlePrenotazioneLogin {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ff292c;
+}
+
+#login {
+  width: 25%;
+  /* height: 40%; */
+  padding-top: 10px;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.5);
+  /* margin-bottom: 3%; */
+  /* background-color: rgba(0, 0, 255, 0.327); */
+}
+
+#bottoneAccedi {
+  padding: 5%;
+  /* text-align: center; */
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5% 0;
+  /* align-items: center; */
+}
+
+form {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#login #fieldsetLogin {
+  padding: 10px;
+}
+
+#login input[type="submit"] {
+  background-color: red;
+  border-radius: 5px;
+  padding: 12px 25px;
+  margin: 20px 5px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.05s;
+  -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#login input:hover[type="submit"] {
+  transform: translateY(-3px);
+  color: black;
+}
+
+#fieldsetLogin {
+  /* background-color: rgba(0, 0, 255, 0.327); */
+  background-color: rgba(210, 209, 209, 0.9);
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  border-radius: 10px;
+  /* margin-top: 2%; */
+  /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  padding: 25px 0;
+  /* background-color: #f1f1f1; */
+  background-color: black;
+  font-style: italic;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 20px;
+  /* color: black; */
+  color: white;
+}
+
+.footer .social a {
+  font-size: 24px;
+  /* color: black; */
+  color: white;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 16px;
+}
+
+.footer .social a:hover {
+  color: blue;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* .footer .scrittaSocial{
+      font-weight: 500;
+      margin: 0 0 10px 0;
+      text-align: center;
+      font-size: 18px;
+      color: white;
+    } */
+
+.footer .copyright {
+  font-weight: 500;
+  /* margin-top: 10px; */
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
