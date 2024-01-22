@@ -4,13 +4,14 @@ password: 1234 -->
 <?php
 session_start();
 // var_dump($_SESSION);
-if (isset($_SESSION["active_login"])) header("Location: loginEffettuato.php"); // sessione già convalidata
+if (isset($_SESSION["active_login"])) {header("Location: loginEffettuato.php"); exit();} // sessione già convalidata
 if (isset($_POST["submit"])) { //premuto invio
     $user = $_POST["username"];
     $psw = $_POST["password"];
     if ($user == "Daniele" && $psw == "1234") { //coincidono user e pwd
         $_SESSION["active_login"] = $user; // memorizzo e attivo la sessione utente
         header("Location: libreria.php"); //invio alla pagina di elaborazione
+        exit();
     } else $error = "Username o password errati!";
 }
 ?>
@@ -47,7 +48,7 @@ if (!isset($_COOKIE[$cookie_name])) {
 
 <body>
 
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <div class="max">
 
             <div class="home"><img src="" alt=""><a href="index.php"> Libreria </a></div>
@@ -60,7 +61,7 @@ if (!isset($_COOKIE[$cookie_name])) {
                     <a href="index.php"> Carrello <br /> </a>
                 </li>
             </ul>
-    </nav>
+    </nav> -->
 
     <div id="immSfondoLogin">
         <div id="login">
@@ -90,7 +91,7 @@ if (!isset($_COOKIE[$cookie_name])) {
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
-        <p class="copyright">Copyright by Follia sulla Riva</p>
+        <p class="copyright">Copyright by Boggian Daniele</p>
     </div>
 </body>
 
