@@ -72,9 +72,11 @@ $user = $_SESSION["active_login"]; //assegna a $user il nome memorizzato
             <div class="prezzo"> <div class = "costo"> Prezzo: {$format($key["prezzo"])}€ </div> <div class = "bottone">
 
             <form action="" method="post">
-              <div class="quantita"><input type="number" name="quantita" min="0" max="$key[quantita]" value="0"></div>
-              <label for="compra$key[id]" id="aggiungiProdotto">Aggiungi</label>
-              <input type="submit" id="compra$key[id]" name="compra" value="$key[id]" style="display:none;">
+                <div id="formAggiungi">
+                  <div class="quantita"><input type="number" name="quantita" min="0" max="$key[quantita]" value="0"></div>
+                  <label for="compra$key[id]" id="aggiungiProdotto">Aggiungi</label>
+                  <input type="submit" id="compra$key[id]" name="compra" value="$key[id]" style="display:none;">
+                </div>
             </form>
             
         </div> </div>

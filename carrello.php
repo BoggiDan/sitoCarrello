@@ -122,7 +122,7 @@ $format=function($num){return number_format((float)$num, 2, '.', '');}; //Arrow 
         Prezzo totale: <?=$format($costoTotaleCarrello)?>€
     </p>
 
-    <div id="UserInfo">
+    <div id="UserInfo1">
         <form action="libreria.php">
             <input type="submit" id="shop" name="shop" value="Shop">
         </form>
